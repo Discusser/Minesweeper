@@ -1,0 +1,154 @@
+@import "./base.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#__nuxt {
+  font-weight: normal;
+  padding: 16px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+html {
+  min-height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  @apply mb-2;
+}
+
+h1 {
+  @apply text-3xl;
+}
+
+h2 {
+  @apply text-2xl;
+}
+
+h3 {
+  @apply text-xl;
+}
+
+hr {
+  border-color: var(--vt-c-divider-dark-1);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* TODO: make work */
+::-webkit-scrollbar:hover {
+  width: 6px;
+  height: 6px;
+}
+
+/* :hover::-webkit-scrollbar { */
+/*   width: 12px; */
+/*   height: 12px; */
+/*   background: red; */
+/* } */
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--vt-c-divider-dark-1);
+  @apply rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--vt-c-divider-dark-0);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-corner {
+  width: 0;
+  height: 0;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 200,
+    "GRAD" 0,
+    "opsz" 24;
+  transition: background-color 0.3s;
+}
+
+.icon-filled {
+  font-variation-settings: "FILL" 1;
+}
+
+.material-symbols-outlined:hover {
+  @apply bg-mute;
+}
+
+.base-widget {
+  @apply bg-alt;
+  @apply border-alt;
+  @apply border-alt-hover;
+  @apply border;
+  @apply rounded;
+}
+
+.text-alt {
+  color: var(--vt-c-text-dark-2);
+}
+
+.bg {
+  background-color: var(--color-background);
+}
+
+.bg-transparent {
+  background-color: var(--color-background-transparent);
+}
+
+.bg-alt,
+.bg-soft {
+  background-color: var(--color-background-soft);
+}
+
+.bg-mute {
+  background-color: var(--color-background-mute);
+}
+
+.bg-mute-hover {
+  transition: background-color 0.2s;
+}
+
+.bg-mute-hover:hover {
+  @apply bg-mute;
+}
+
+.border-alt {
+  border-color: var(--color-border);
+  transition: border-color 0.5s;
+}
+
+.border-alt-hover:hover {
+  border-color: var(--color-border-hover);
+}
+
+input:disabled {
+  cursor: auto;
+  @apply bg-alt;
+}
+
+/* table, tr, td { */
+/*   border: 1px solid black; */
+/*   border-collapse: collapse; */
+/* } */
+
+.groove-border {
+  border: 3px solid black;
+  border-style: outset;
+  border-collapse: collapse;
+}
