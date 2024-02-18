@@ -389,7 +389,7 @@ watch(bombCount, () => {
           />
         </div>
         <div class="self-stretch w-[2px] bg-mute"></div>
-        <div class="flex flex-col w-24">
+        <div class="flex flex-col w-32">
           <div>
             <span>Flags left: </span>
             <span class="rounded float-right">{{ flagsLeft }}</span>
