@@ -3,6 +3,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["assets/out.css", "assets/base.css"],
   app: {
-    buildAssetsDir: "/",
+    buildAssetsDir: "/assets/",
   },
 });
