@@ -50,6 +50,7 @@ function startGame() {
   bombPositions.length = 0;
   flagPositions.length = 0;
   openedPositions.length = 0;
+  flagsLeft.value = bombCount.value;
 
   if (game.value) {
     for (let y = 0; y < gameHeight.value; y++) {
