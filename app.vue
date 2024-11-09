@@ -121,7 +121,6 @@ function onCellClick(event: MouseEvent) {
 
 function onCellRightClick(event: MouseEvent) {
   event.preventDefault();
-  console.log("gameover",gameOver.value,"gamewon",gameWon.value);
   if (!(gameOver.value || gameWon.value) && event.target instanceof HTMLTableCellElement) {
     const cell = event.target as HTMLTableCellElement;
     const pos = cell.id.split(";");
@@ -172,8 +171,6 @@ function onCellOpen(x: number, y: number) {
   cell.style.backgroundImage = `url(${adjacentBombs}.png)`;
   openedPositions.push([x, y]);
 
-  console.log(cell);
-  console.log(openedPositions.length, bombPositions.length, gameWidth.value * gameHeight.value);
   if (openedPositions.length + bombPositions.length == gameWidth.value * gameHeight.value) {
     gameWon.value = true;
     displayGameWon.value = true;
